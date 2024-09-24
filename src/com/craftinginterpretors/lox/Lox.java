@@ -24,6 +24,8 @@ public class Lox{
         else {
             runPrompt();
         }
+        
+        // runFile("testing.txt"); 
     }
 
     private static void runFile(String path) throws IOException {
