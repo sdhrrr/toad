@@ -35,7 +35,7 @@ class Scanner {
 
     private int start = 0;
     private int current = 0;
-    private int line = 0;
+    private int line = 1;
 
     Scanner(String source){
         this.source = source;
@@ -105,7 +105,7 @@ class Scanner {
             }
             else if (isAlpha(c)) identifier();
             else {
-                Lox.error(line, "unexpected ccharecter. ");
+                Lox.error(line, "unexpected '"+c+"'charecter. ");
             }
             break;
         }
@@ -170,7 +170,7 @@ class Scanner {
     }
 
     private boolean isAlpha(char c){
-        return (c >= 'a' && c <= 'z') || (c >= 'A' && c >= 'Z') || c == '_';
+        return (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || c == '_';
     }
 
     private boolean isAlphaNumeric(char c){
