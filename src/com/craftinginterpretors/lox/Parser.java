@@ -17,14 +17,6 @@ public class Parser {
         this.tokens = tokens;
     }
 
-    // Expr parse() {
-    //     try {
-    //         return expression();
-    //     }
-    //     catch (ParseError error) {
-    //         return null;
-    //     }
-    // }
 
     List<Stmt> parse() {
         List<Stmt> statements = new ArrayList<>();
@@ -41,6 +33,7 @@ public class Parser {
 
     private Stmt declaration() {
         try {
+            if(match(CLASS)) return classDeclaration();
             if(match(FUN)) return function("function");
             if(match(VAR)) return varDeclaration();
             return statement();
@@ -49,6 +42,20 @@ public class Parser {
             synchronize();
             return null;
         }
+    }
+
+    private Stmt classDeclaration() {
+        Token name = consume(IDENTIFIER, "Expect class name.");
+        consume(LEFT_BRACE, "Expected a '{' before class body.");
+
+        List<Stmt.Function> methods = new ArrayList<>();
+        while(!check(RIGHT_BRACE) && !isAtEnd()) {
+            methods.add(function("method"));
+        }
+
+        consume(RIGHT_BRACE, "Expected a '}' after class body.");
+
+        return new Stmt.Class(name, methods);
     }
 
     private Stmt statement() {
