@@ -10,6 +10,8 @@ import java.util.List;
 
 public class Lox{
 
+    // later try removing the braces if its a single line loop or if condition.
+
     private static final Interpretor interpretor = new Interpretor();
     static boolean hadError = false;
     static boolean hadRuntimeError = false;
