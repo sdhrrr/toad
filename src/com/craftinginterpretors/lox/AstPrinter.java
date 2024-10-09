@@ -2,7 +2,10 @@ package com.craftinginterpretors.lox;
 
 import com.craftinginterpretors.lox.Expr.Assign;
 import com.craftinginterpretors.lox.Expr.Call;
+import com.craftinginterpretors.lox.Expr.Get;
 import com.craftinginterpretors.lox.Expr.Logical;
+import com.craftinginterpretors.lox.Expr.Set;
+import com.craftinginterpretors.lox.Expr.This;
 import com.craftinginterpretors.lox.Expr.Variable;
 
 class AstPrinter implements Expr.Visitor<String>{
@@ -68,6 +71,24 @@ class AstPrinter implements Expr.Visitor<String>{
     public String visitVariableExpr(Variable expr) {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'visitVariableExpr'");
+    }
+
+    @Override
+    public String visitGetExpr(Get expr) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'visitGetExpr'");
+    }
+
+    @Override
+    public String visitSetExpr(Set expr) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'visitSetExpr'");
+    }
+
+    @Override
+    public String visitThisExpr(This expr) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'visitThisExpr'");
     }
 
     // pritns (* (- 123) (group 45.67)) . was checking the ast tree printer
