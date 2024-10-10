@@ -1,5 +1,5 @@
 ## Welcome to Toad 
-<hr>
+
 Toad is an open source, fun and lightweight  programming language with dynamic semantics.
 It is simple and easy to learn which doesn't require any compilation.
 Toad is inspired from python and runs on Java Runtime Environment. 
