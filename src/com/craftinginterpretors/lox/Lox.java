@@ -16,18 +16,18 @@ public class Lox{
     static boolean hadError = false;
     static boolean hadRuntimeError = false;
     public static void main(String[] args) throws IOException{
-        // if(args.length > 1) {
-        //     System.out.println("Usage: jlox [script]");
-        //     System.exit(64);
-        // } 
-        // else if(args.length == 1){
-        //     runFile(args[0]); 
-        // }
-        // else {
-        //     runPrompt();
-        // }
+        if(args.length > 1) {
+            System.out.println("Usage: jlox [script]");
+            System.exit(64);
+        } 
+        else if(args.length == 1){
+            runFile(args[0]); 
+        }
+        else {
+            runPrompt();
+        }
 
-        runFile("testing.txt"); 
+        // runFile("testing.txt"); 
     }
 
     private static void runFile(String path) throws IOException {
