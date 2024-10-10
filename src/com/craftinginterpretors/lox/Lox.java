@@ -10,14 +10,12 @@ import java.util.List;
 
 public class Lox{
 
-    // later try removing the braces if its a single line loop or if condition.
-
     private static final Interpretor interpretor = new Interpretor();
     static boolean hadError = false;
     static boolean hadRuntimeError = false;
     public static void main(String[] args) throws IOException{
         if(args.length > 1) {
-            System.out.println("Usage: jlox [script]");
+            System.out.println("Usage: toad [script]");
             System.exit(64);
         } 
         else if(args.length == 1){
