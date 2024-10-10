@@ -1,18 +1,28 @@
-## Getting Started
+## Welcome to Toad 
+<hr>
+Toad is an open source, fun and lightweight  programming language with dynamic semantics.
+It is simple and easy to learn which doesn't require any compilation.
+Toad is inspired from python and runs on Java Runtime Environment. 
+Toad packages core programming features like flow control, functions, high level constructs like objects and closures. 
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+### Getting started 
+Try Toad out just by downloading the lastest release.
+After downloading the `Toad.jar` file, create a new text file `sampleToadCode.txt` for a test run. 
+Make sure you have java runtime installed. 
 
-## Folder Structure
+Open the terminal in the same directory and type the following : `java -toad.jar sampleToadcode.txt`
 
-The workspace contains two folders by default, where:
+This command will interpret and run the code written in `sampleToadCode.txt`.
+La voilà, we have the outputted result in the terminal.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+### Contributing to Toad
+Contributions to Toad are welcomed and encouraged! 
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+There are many corners in Toad which need to sharpening. Please let me know of any bugs or errors which I might be oblivious of, I'll try to improve them.
+Any additions like libraries or data-structures are welcomed and appreciated.
+Download the source files and make improvements to the code and put a pull request.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+*Make sure to test your changes before submitting the pull request.*
 
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+#### Special Thanks
+This project would not have been possible without the reference book: Crafting Interpretors by [Robert Nystrom](https://github.com/munificent)
